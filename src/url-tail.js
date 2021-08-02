@@ -1,4 +1,4 @@
-exports.urlTail = function(remoteUrl, errorCallback, newDataCallback, options) {
+module.exports = function(remoteUrl, errorCallback, newDataCallback, options) {
     if(!options)
         options = {};
 
