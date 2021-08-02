@@ -1,0 +1,27 @@
+{
+  "name": "@imdt-os/url-tail",
+  "version": "0.0.1",
+  "description": "This package allows you to monitor changes to a remote file using polling of an external URL. This polling uses HTTP range, so only new data is transferred.",
+  "main": "src/url-tail.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iMDT/url-tail.git"
+  },
+  "keywords": [
+    "tail",
+    "follow",
+    "remote",
+    "url",
+    "http",
+    "range"
+  ],
+  "author": "iMDT",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iMDT/url-tail/issues"
+  },
+  "homepage": "https://github.com/iMDT/url-tail#readme"
+}
