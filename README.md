@@ -23,5 +23,5 @@ const destroy = urlTail("http://127.0.0.1/log.txt", ()=>{
     console.log("New data available", newData);
 }, {debug: false});
 
-setTimeout( destroy, 60000 ); // Destroy it after 10s
+setTimeout( destroy, 60000 ); // Destroy it after 60s
 ```
