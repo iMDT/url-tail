@@ -1,6 +1,6 @@
 {
   "name": "@imdt-os/url-tail",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "This package allows you to monitor changes to a remote file using polling of an external URL. This polling uses HTTP range, so only new data is transferred.",
   "main": "src/url-tail.js",
   "scripts": {
