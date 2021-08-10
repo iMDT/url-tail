@@ -10,8 +10,15 @@ module.exports = function(remoteUrl, errorCallback, newDataCallback, options) {
         position: 0
     };
 
+    let destroyed = false;
+
     if(debug) console.log(`> HEAD request`);
     checkForNewData = () => {
+        if(destroyed) {
+            if(debug) console.log(`Destroyed, exiting`);
+            return;
+        }
+        
         fetch(remoteUrl, {method: 'HEAD'}).then((result) => {
             const {headers} = result;
             const currentFileSize = headers.get(`content-length`);
@@ -67,4 +74,9 @@ module.exports = function(remoteUrl, errorCallback, newDataCallback, options) {
     }
 
     checkForNewData();
+
+
+    return () => {
+        destroyed = true;
+    };
 };

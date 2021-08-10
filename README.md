@@ -14,7 +14,7 @@ npm install @imdt-os/url-tail
 
 ```js
 const urlTail = require('@imdt-os/url-tail');
-urlTail("http://127.0.0.1/log.txt", ()=>{
+const destroy = urlTail("http://127.0.0.1/log.txt", ()=>{
     console.error("Error");
 }, (newData, reset)=>{
     if(reset){
@@ -22,4 +22,6 @@ urlTail("http://127.0.0.1/log.txt", ()=>{
     }
     console.log("New data available", newData);
 }, {debug: false});
+
+setTimeout( destroy, 60000 ); // Destroy it after 10s
 ```
